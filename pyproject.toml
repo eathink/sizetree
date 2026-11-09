@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sizetree"
+version = "0.1.0"
+description = "以树状结构展示目录占用，按大小排序"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "eathink" }]
+keywords = ["disk", "usage", "tree", "du", "cli", "devtools"]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: System :: Filesystems",
+    "Topic :: Utilities",
+]
+
+[project.scripts]
+sizetree = "sizetree.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/eathink/sizetree"
+
+[tool.setuptools.packages.find]
+where = ["src"]
